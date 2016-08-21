@@ -1,0 +1,174 @@
+\hypertarget{filter_8c}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/filter.c File Reference}
+\label{filter_8c}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/filter.\+c@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/filter.\+c}}
+{\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{filter_8c_ac8490945773d1ac7beb48bc0e4e62bcd}{filter\+\_\+\+Init\+\_\+\+E\+MA} (\hyperlink{filter_8h_aa17aa30fb759e9adc1d0b5d211b53c84}{E\+M\+A\+Filter} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Initializes an exponential moving average filter. \end{DoxyCompactList}\item 
+float \hyperlink{filter_8c_a1323618d289a686b18779f674379bec7}{filter\+\_\+\+E\+MA} (\hyperlink{filter_8h_aa17aa30fb759e9adc1d0b5d211b53c84}{E\+M\+A\+Filter} $\ast$filter, const float read\+In, const float alpha)
+\begin{DoxyCompactList}\small\item\em Filters an input. \end{DoxyCompactList}\item 
+void \hyperlink{filter_8c_a09305b6dab01bf746288722faabdce5f}{filter\+\_\+\+Init\+\_\+\+D\+E\+MA} (\hyperlink{filter_8h_a7dde035e516b0067d35e0a4580bec1f5}{D\+E\+M\+A\+Filter} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Initializes a double exponential moving average filter. \end{DoxyCompactList}\item 
+float \hyperlink{filter_8c_a3683e206f0cd7fe581c723aea7e6016c}{filter\+\_\+\+D\+E\+MA} (\hyperlink{filter_8h_a7dde035e516b0067d35e0a4580bec1f5}{D\+E\+M\+A\+Filter} $\ast$filter, const float read\+In, const float alpha, const float beta)
+\begin{DoxyCompactList}\small\item\em Filters an input. \end{DoxyCompactList}\item 
+void \hyperlink{filter_8c_a724457388ade167b3838fe37396f1ee5}{filter\+\_\+\+Init\+\_\+\+F\+UA} (\hyperlink{filter_8h_a4866a8f681c071d3168c99c05f5d41ae}{F\+U\+A\+Filter} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Five-\/unit average filter. \end{DoxyCompactList}\item 
+float \hyperlink{filter_8c_a0d0fd757e65bb0b3462d0fdba1b16eec}{filter\+\_\+\+F\+UA} (\hyperlink{filter_8h_a4866a8f681c071d3168c99c05f5d41ae}{F\+U\+A\+Filter} $\ast$filter, const float component\+In)
+\begin{DoxyCompactList}\small\item\em Filters an input. \end{DoxyCompactList}\item 
+void \hyperlink{filter_8c_af1d3037846bb9c2829d139b97c8725c8}{filter\+\_\+\+Init\+\_\+\+T\+UA} (\hyperlink{filter_8h_abeabbff0425563999fedddc127363f43}{T\+U\+A\+Filter} $\ast$filter)
+\begin{DoxyCompactList}\small\item\em Ten-\/unit average filter. \end{DoxyCompactList}\item 
+float \hyperlink{filter_8c_a9f9380d0788154030389cee0b17a54ce}{filter\+\_\+\+T\+UA} (\hyperlink{filter_8h_abeabbff0425563999fedddc127363f43}{T\+U\+A\+Filter} $\ast$filter, const float component\+In)
+\begin{DoxyCompactList}\small\item\em Filters an input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+D\+E\+MA@{filter\+\_\+\+D\+E\+MA}}
+\index{filter\+\_\+\+D\+E\+MA@{filter\+\_\+\+D\+E\+MA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+D\+E\+M\+A(\+D\+E\+M\+A\+Filter $\ast$filter, const float read\+In, const float alpha, const float beta)}{filter_DEMA(DEMAFilter *filter, const float readIn, const float alpha, const float beta)}}]{\setlength{\rightskip}{0pt plus 5cm}float filter\+\_\+\+D\+E\+MA (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+E\+M\+A\+Filter} $\ast$}]{filter, }
+\item[{const float}]{read\+In, }
+\item[{const float}]{alpha, }
+\item[{const float}]{beta}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a3683e206f0cd7fe581c723aea7e6016c}{}\label{filter_8c_a3683e206f0cd7fe581c723aea7e6016c}
+
+
+Filters an input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The D\+E\+MA filter \\
+\hline
+{\em read\+In} & Input to filter \\
+\hline
+{\em alpha} & D\+E\+MA alpha gain \\
+\hline
+{\em beta} & D\+E\+MA beta gain \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+E\+MA@{filter\+\_\+\+E\+MA}}
+\index{filter\+\_\+\+E\+MA@{filter\+\_\+\+E\+MA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+E\+M\+A(\+E\+M\+A\+Filter $\ast$filter, const float read\+In, const float alpha)}{filter_EMA(EMAFilter *filter, const float readIn, const float alpha)}}]{\setlength{\rightskip}{0pt plus 5cm}float filter\+\_\+\+E\+MA (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+M\+A\+Filter} $\ast$}]{filter, }
+\item[{const float}]{read\+In, }
+\item[{const float}]{alpha}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a1323618d289a686b18779f674379bec7}{}\label{filter_8c_a1323618d289a686b18779f674379bec7}
+
+
+Filters an input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The E\+MA filter \\
+\hline
+{\em read\+In} & Input to filter \\
+\hline
+{\em alpha} & E\+MA alpha gain \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+F\+UA@{filter\+\_\+\+F\+UA}}
+\index{filter\+\_\+\+F\+UA@{filter\+\_\+\+F\+UA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+F\+U\+A(\+F\+U\+A\+Filter $\ast$filter, const float component\+In)}{filter_FUA(FUAFilter *filter, const float componentIn)}}]{\setlength{\rightskip}{0pt plus 5cm}float filter\+\_\+\+F\+UA (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+U\+A\+Filter} $\ast$}]{filter, }
+\item[{const float}]{component\+In}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a0d0fd757e65bb0b3462d0fdba1b16eec}{}\label{filter_8c_a0d0fd757e65bb0b3462d0fdba1b16eec}
+
+
+Filters an input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The F\+UA filter \\
+\hline
+{\em component\+In} & Input to filter \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+Init\+\_\+\+D\+E\+MA@{filter\+\_\+\+Init\+\_\+\+D\+E\+MA}}
+\index{filter\+\_\+\+Init\+\_\+\+D\+E\+MA@{filter\+\_\+\+Init\+\_\+\+D\+E\+MA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+Init\+\_\+\+D\+E\+M\+A(\+D\+E\+M\+A\+Filter $\ast$filter)}{filter_Init_DEMA(DEMAFilter *filter)}}]{\setlength{\rightskip}{0pt plus 5cm}void filter\+\_\+\+Init\+\_\+\+D\+E\+MA (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+E\+M\+A\+Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a09305b6dab01bf746288722faabdce5f}{}\label{filter_8c_a09305b6dab01bf746288722faabdce5f}
+
+
+Initializes a double exponential moving average filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The D\+E\+MA filter \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+Init\+\_\+\+E\+MA@{filter\+\_\+\+Init\+\_\+\+E\+MA}}
+\index{filter\+\_\+\+Init\+\_\+\+E\+MA@{filter\+\_\+\+Init\+\_\+\+E\+MA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+Init\+\_\+\+E\+M\+A(\+E\+M\+A\+Filter $\ast$filter)}{filter_Init_EMA(EMAFilter *filter)}}]{\setlength{\rightskip}{0pt plus 5cm}void filter\+\_\+\+Init\+\_\+\+E\+MA (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+M\+A\+Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_ac8490945773d1ac7beb48bc0e4e62bcd}{}\label{filter_8c_ac8490945773d1ac7beb48bc0e4e62bcd}
+
+
+Initializes an exponential moving average filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The E\+MA filter \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+Init\+\_\+\+F\+UA@{filter\+\_\+\+Init\+\_\+\+F\+UA}}
+\index{filter\+\_\+\+Init\+\_\+\+F\+UA@{filter\+\_\+\+Init\+\_\+\+F\+UA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+Init\+\_\+\+F\+U\+A(\+F\+U\+A\+Filter $\ast$filter)}{filter_Init_FUA(FUAFilter *filter)}}]{\setlength{\rightskip}{0pt plus 5cm}void filter\+\_\+\+Init\+\_\+\+F\+UA (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+U\+A\+Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a724457388ade167b3838fe37396f1ee5}{}\label{filter_8c_a724457388ade167b3838fe37396f1ee5}
+
+
+Five-\/unit average filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The F\+UA filter \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+Init\+\_\+\+T\+UA@{filter\+\_\+\+Init\+\_\+\+T\+UA}}
+\index{filter\+\_\+\+Init\+\_\+\+T\+UA@{filter\+\_\+\+Init\+\_\+\+T\+UA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+Init\+\_\+\+T\+U\+A(\+T\+U\+A\+Filter $\ast$filter)}{filter_Init_TUA(TUAFilter *filter)}}]{\setlength{\rightskip}{0pt plus 5cm}void filter\+\_\+\+Init\+\_\+\+T\+UA (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+U\+A\+Filter} $\ast$}]{filter}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_af1d3037846bb9c2829d139b97c8725c8}{}\label{filter_8c_af1d3037846bb9c2829d139b97c8725c8}
+
+
+Ten-\/unit average filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The T\+UA filter \\
+\hline
+\end{DoxyParams}
+\index{filter.\+c@{filter.\+c}!filter\+\_\+\+T\+UA@{filter\+\_\+\+T\+UA}}
+\index{filter\+\_\+\+T\+UA@{filter\+\_\+\+T\+UA}!filter.\+c@{filter.\+c}}
+\subsubsection[{\texorpdfstring{filter\+\_\+\+T\+U\+A(\+T\+U\+A\+Filter $\ast$filter, const float component\+In)}{filter_TUA(TUAFilter *filter, const float componentIn)}}]{\setlength{\rightskip}{0pt plus 5cm}float filter\+\_\+\+T\+UA (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+U\+A\+Filter} $\ast$}]{filter, }
+\item[{const float}]{component\+In}
+\end{DoxyParamCaption}
+)}\hypertarget{filter_8c_a9f9380d0788154030389cee0b17a54ce}{}\label{filter_8c_a9f9380d0788154030389cee0b17a54ce}
+
+
+Filters an input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & The T\+UA filter \\
+\hline
+{\em component\+In} & Input to filter \\
+\hline
+\end{DoxyParams}

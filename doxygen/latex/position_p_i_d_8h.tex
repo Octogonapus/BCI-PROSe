@@ -1,0 +1,166 @@
+\hypertarget{position_p_i_d_8h}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/position\+P\+ID.h File Reference}
+\label{position_p_i_d_8h}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/position\+P\+I\+D.\+h@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/position\+P\+I\+D.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpos___p_i_d__t}{pos\+\_\+\+P\+I\+D\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structpos___p_i_d__t}{pos\+\_\+\+P\+I\+D\+\_\+t} \hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{position_p_i_d_8h_a04718c0d75baffd22439f461fc872c47}{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid, const float kP, const float kI, const float kD)
+\begin{DoxyCompactList}\small\item\em Initializes a position P\+ID controller. \end{DoxyCompactList}\item 
+void \hyperlink{position_p_i_d_8h_a13d66dcab182e535730fbfcc865e80d0}{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid, const float kP, const float kI, const float kD, const float k\+Bias, const int error\+Threshold, const int integral\+Limit)
+\begin{DoxyCompactList}\small\item\em Initializes a position P\+ID controller. \end{DoxyCompactList}\item 
+void \hyperlink{position_p_i_d_8h_a00c4cd59db0bb42f59a57102f7d2b7db}{pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid, const int target\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets the target position. \end{DoxyCompactList}\item 
+int \hyperlink{position_p_i_d_8h_a1b9a780c668af0ae6f44c70946555e8c}{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current error. \end{DoxyCompactList}\item 
+int \hyperlink{position_p_i_d_8h_a82a13940b9eb32d4db79ae79c519260b}{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current output. \end{DoxyCompactList}\item 
+int \hyperlink{position_p_i_d_8h_a29e831e1b6c2c2133379174b4331267a}{pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller} (\hyperlink{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{pos\+\_\+\+P\+ID} $\ast$pid, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+ID@{pos\+\_\+\+P\+ID}}
+\index{pos\+\_\+\+P\+ID@{pos\+\_\+\+P\+ID}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+ID}{pos_PID}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pos\+\_\+\+P\+I\+D\+\_\+t}  {\bf pos\+\_\+\+P\+ID}}\hypertarget{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}{}\label{position_p_i_d_8h_ac1ca20532b21241fa2922c83a49e3b3b}
+
+
+\subsection{Function Documentation}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error@{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error@{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error(pos\+\_\+\+P\+I\+D $\ast$pid)}{pos_PID_GetError(pos_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}int pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{position_p_i_d_8h_a1b9a780c668af0ae6f44c70946555e8c}{}\label{position_p_i_d_8h_a1b9a780c668af0ae6f44c70946555e8c}
+
+
+Gets the current error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The \\
+\hline
+\end{DoxyParams}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output@{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output@{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output(pos\+\_\+\+P\+I\+D $\ast$pid)}{pos_PID_GetOutput(pos_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}int pos\+\_\+\+P\+I\+D\+\_\+\+Get\+Output (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{position_p_i_d_8h_a82a13940b9eb32d4db79ae79c519260b}{}\label{position_p_i_d_8h_a82a13940b9eb32d4db79ae79c519260b}
+
+
+Gets the current output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+\end{DoxyParams}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller@{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller@{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller(pos\+\_\+\+P\+I\+D $\ast$pid, const float k\+P, const float k\+I, const float k\+D)}{pos_PID_InitController(pos_PID *pid, const float kP, const float kI, const float kD)}}]{\setlength{\rightskip}{0pt plus 5cm}void pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{kP, }
+\item[{const float}]{kI, }
+\item[{const float}]{kD}
+\end{DoxyParamCaption}
+)}\hypertarget{position_p_i_d_8h_a04718c0d75baffd22439f461fc872c47}{}\label{position_p_i_d_8h_a04718c0d75baffd22439f461fc872c47}
+
+
+Initializes a position P\+ID controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller to initialize \\
+\hline
+{\em kP} & Proportional gain \\
+\hline
+{\em kI} & Integral gain \\
+\hline
+{\em kD} & Derivative gain \\
+\hline
+\end{DoxyParams}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full@{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full@{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full(pos\+\_\+\+P\+I\+D $\ast$pid, const float k\+P, const float k\+I, const float k\+D, const float k\+Bias, const int error\+Threshold, const int integral\+Limit)}{pos_PID_InitController_Full(pos_PID *pid, const float kP, const float kI, const float kD, const float kBias, const int errorThreshold, const int integralLimit)}}]{\setlength{\rightskip}{0pt plus 5cm}void pos\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller\+\_\+\+Full (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{kP, }
+\item[{const float}]{kI, }
+\item[{const float}]{kD, }
+\item[{const float}]{k\+Bias, }
+\item[{const int}]{error\+Threshold, }
+\item[{const int}]{integral\+Limit}
+\end{DoxyParamCaption}
+)}\hypertarget{position_p_i_d_8h_a13d66dcab182e535730fbfcc865e80d0}{}\label{position_p_i_d_8h_a13d66dcab182e535730fbfcc865e80d0}
+
+
+Initializes a position P\+ID controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller to initialize \\
+\hline
+{\em kP} & Proportional gain \\
+\hline
+{\em kI} & Integral gain \\
+\hline
+{\em kD} & Derivative gain \\
+\hline
+{\em k\+Bias} & Controller bias added to final output \\
+\hline
+{\em error\+Threshold} & Minimum error needed to sum for integral term \\
+\hline
+{\em integral\+Limit} & Maximum integral term value \\
+\hline
+\end{DoxyParams}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position@{pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position@{pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position(pos\+\_\+\+P\+I\+D $\ast$pid, const int target\+Pos)}{pos_PID_SetTargetPosition(pos_PID *pid, const int targetPos)}}]{\setlength{\rightskip}{0pt plus 5cm}void pos\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const int}]{target\+Pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{position_p_i_d_8h_a00c4cd59db0bb42f59a57102f7d2b7db}{}\label{position_p_i_d_8h_a00c4cd59db0bb42f59a57102f7d2b7db}
+
+
+Sets the target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em target\+Pos} & Target position \\
+\hline
+\end{DoxyParams}
+\index{position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}!pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller@{pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller}}
+\index{pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller@{pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller}!position\+P\+I\+D.\+h@{position\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller(pos\+\_\+\+P\+I\+D $\ast$pid, const float sens)}{pos_PID_StepController(pos_PID *pid, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int pos\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf pos\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{position_p_i_d_8h_a29e831e1b6c2c2133379174b4331267a}{}\label{position_p_i_d_8h_a29e831e1b6c2c2133379174b4331267a}
+
+
+Steps the controller\textquotesingle{}s calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The pid controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}
+Calculate derivative 

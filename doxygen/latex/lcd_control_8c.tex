@@ -1,0 +1,207 @@
+\hypertarget{lcd_control_8c}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/lcd\+Control.c File Reference}
+\label{lcd_control_8c}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/lcd\+Control.\+c@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/lcd\+Control.\+c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}A\+P\+I.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lcd\+Control.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$ \hyperlink{lcd_control_8c_af3a33434826d578f500174e20e095c50}{new\+Menu} (char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Allocates and initializes a menu. \end{DoxyCompactList}\item 
+\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$ \hyperlink{lcd_control_8c_ae4958fde4c7776ef3a7d18b37b2ae1ec}{new\+Menu\+With\+Dispatch} (char $\ast$msg, void($\ast$dispatch\+Function)())
+\begin{DoxyCompactList}\small\item\em Allocates and initializes a menu. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_adb53797cd4c09d52244e0fd1c50da5ae}{set\+Backlight\+Blink\+Rate} (const unsigned int rate)
+\begin{DoxyCompactList}\small\item\em Sets a blink rate (in Hz) for the lcd backlight. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_ae81ffb15c3aaabe2ae012ff557bfb660}{change\+Function} (\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu}, void($\ast$func)())
+\begin{DoxyCompactList}\small\item\em Changes the dispatch function of a menu. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_a16b64b292413dda5fe2e870bbb9370c2}{change\+Message} (\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu}, char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Changes the message of a menu. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_acab0aa8700b6247fd0e2d763563f4da4}{form\+Level} (\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$parent, const unsigned int child\+Count,...)
+\begin{DoxyCompactList}\small\item\em Childs menus to a parent. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_af808609d294121ff765a1a7a4f2f2f03}{put\+Menu\+In\+Row} (\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$m, \hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$next, \hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$prev)
+\begin{DoxyCompactList}\small\item\em Inserts a menu into a row. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_a19eed9d0a5f6e94b870f0a9245d0c9a6}{link\+Menus} (const unsigned int count,...)
+\begin{DoxyCompactList}\small\item\em Pairs menus. \end{DoxyCompactList}\item 
+void \hyperlink{lcd_control_8c_a7bd7cebf4911b1d32401889adc74196c}{start\+Update\+L\+C\+D\+Thread} ()
+\begin{DoxyCompactList}\small\item\em Updates the L\+CD and responds to button presses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lcd_control_8h_a94bc8f504310a3fa140a2ffdee1212a4}{menu} $\ast$ \hyperlink{lcd_control_8c_a5825fcb80354e4a8d2d4158564d99e74}{current\+Menu} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!change\+Function@{change\+Function}}
+\index{change\+Function@{change\+Function}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{change\+Function(menu $\ast$menu, void($\ast$func)())}{changeFunction(menu *menu, void(*func)())}}]{\setlength{\rightskip}{0pt plus 5cm}void change\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf menu} $\ast$}]{menu, }
+\item[{void($\ast$)()}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{lcd_control_8c_ae81ffb15c3aaabe2ae012ff557bfb660}{}\label{lcd_control_8c_ae81ffb15c3aaabe2ae012ff557bfb660}
+
+
+Changes the dispatch function of a menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & The menu \\
+\hline
+{\em func} & New dispatch function \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!change\+Message@{change\+Message}}
+\index{change\+Message@{change\+Message}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{change\+Message(menu $\ast$menu, char $\ast$msg)}{changeMessage(menu *menu, char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void change\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf menu} $\ast$}]{menu, }
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{lcd_control_8c_a16b64b292413dda5fe2e870bbb9370c2}{}\label{lcd_control_8c_a16b64b292413dda5fe2e870bbb9370c2}
+
+
+Changes the message of a menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & The menu \\
+\hline
+{\em msg} & New message \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!form\+Level@{form\+Level}}
+\index{form\+Level@{form\+Level}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{form\+Level(menu $\ast$parent, const unsigned int child\+Count,...)}{formLevel(menu *parent, const unsigned int childCount,...)}}]{\setlength{\rightskip}{0pt plus 5cm}void form\+Level (
+\begin{DoxyParamCaption}
+\item[{{\bf menu} $\ast$}]{parent, }
+\item[{const unsigned int}]{child\+Count, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{lcd_control_8c_acab0aa8700b6247fd0e2d763563f4da4}{}\label{lcd_control_8c_acab0aa8700b6247fd0e2d763563f4da4}
+
+
+Childs menus to a parent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent menu to gain children \\
+\hline
+{\em child\+Count} & The number of menus specified, excluding {\ttfamily parent} \\
+\hline
+{\em ...} & Menus to become children of {\ttfamily parent} \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!link\+Menus@{link\+Menus}}
+\index{link\+Menus@{link\+Menus}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{link\+Menus(const unsigned int count,...)}{linkMenus(const unsigned int count,...)}}]{\setlength{\rightskip}{0pt plus 5cm}void link\+Menus (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{count, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{lcd_control_8c_a19eed9d0a5f6e94b870f0a9245d0c9a6}{}\label{lcd_control_8c_a19eed9d0a5f6e94b870f0a9245d0c9a6}
+
+
+Pairs menus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The number of menus specified \\
+\hline
+{\em ...} & Menus to link (of type {\ttfamily menu$\ast$}) \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!new\+Menu@{new\+Menu}}
+\index{new\+Menu@{new\+Menu}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{new\+Menu(char $\ast$msg)}{newMenu(char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menu}$\ast$ new\+Menu (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{lcd_control_8c_af3a33434826d578f500174e20e095c50}{}\label{lcd_control_8c_af3a33434826d578f500174e20e095c50}
+
+
+Allocates and initializes a menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & String for the menu to display on the L\+CD \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!new\+Menu\+With\+Dispatch@{new\+Menu\+With\+Dispatch}}
+\index{new\+Menu\+With\+Dispatch@{new\+Menu\+With\+Dispatch}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{new\+Menu\+With\+Dispatch(char $\ast$msg, void($\ast$dispatch\+Function)())}{newMenuWithDispatch(char *msg, void(*dispatchFunction)())}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menu}$\ast$ new\+Menu\+With\+Dispatch (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{void($\ast$)()}]{dispatch\+Function}
+\end{DoxyParamCaption}
+)}\hypertarget{lcd_control_8c_ae4958fde4c7776ef3a7d18b37b2ae1ec}{}\label{lcd_control_8c_ae4958fde4c7776ef3a7d18b37b2ae1ec}
+
+
+Allocates and initializes a menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & String for the menu to display on the L\+CD \\
+\hline
+{\em dispatch\+Function} & Function to invoke for this menu \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!put\+Menu\+In\+Row@{put\+Menu\+In\+Row}}
+\index{put\+Menu\+In\+Row@{put\+Menu\+In\+Row}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{put\+Menu\+In\+Row(menu $\ast$m, menu $\ast$next, menu $\ast$prev)}{putMenuInRow(menu *m, menu *next, menu *prev)}}]{\setlength{\rightskip}{0pt plus 5cm}void put\+Menu\+In\+Row (
+\begin{DoxyParamCaption}
+\item[{{\bf menu} $\ast$}]{m, }
+\item[{{\bf menu} $\ast$}]{next, }
+\item[{{\bf menu} $\ast$}]{prev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{lcd_control_8c_af808609d294121ff765a1a7a4f2f2f03}{}\label{lcd_control_8c_af808609d294121ff765a1a7a4f2f2f03}
+
+
+Inserts a menu into a row. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Menu to insert \\
+\hline
+{\em next} & Menu to the right of {\ttfamily m} \\
+\hline
+{\em prev} & Menu to the left of {\ttfamily m} \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!set\+Backlight\+Blink\+Rate@{set\+Backlight\+Blink\+Rate}}
+\index{set\+Backlight\+Blink\+Rate@{set\+Backlight\+Blink\+Rate}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{set\+Backlight\+Blink\+Rate(const unsigned int rate)}{setBacklightBlinkRate(const unsigned int rate)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Backlight\+Blink\+Rate (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{lcd_control_8c_adb53797cd4c09d52244e0fd1c50da5ae}{}\label{lcd_control_8c_adb53797cd4c09d52244e0fd1c50da5ae}
+
+
+Sets a blink rate (in Hz) for the lcd backlight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & L\+CD backlight blink rate (in Hz) \\
+\hline
+\end{DoxyParams}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!start\+Update\+L\+C\+D\+Thread@{start\+Update\+L\+C\+D\+Thread}}
+\index{start\+Update\+L\+C\+D\+Thread@{start\+Update\+L\+C\+D\+Thread}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{start\+Update\+L\+C\+D\+Thread()}{startUpdateLCDThread()}}]{\setlength{\rightskip}{0pt plus 5cm}void start\+Update\+L\+C\+D\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{lcd_control_8c_a7bd7cebf4911b1d32401889adc74196c}{}\label{lcd_control_8c_a7bd7cebf4911b1d32401889adc74196c}
+
+
+Updates the L\+CD and responds to button presses. 
+
+
+
+\subsection{Variable Documentation}
+\index{lcd\+Control.\+c@{lcd\+Control.\+c}!current\+Menu@{current\+Menu}}
+\index{current\+Menu@{current\+Menu}!lcd\+Control.\+c@{lcd\+Control.\+c}}
+\subsubsection[{\texorpdfstring{current\+Menu}{currentMenu}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menu}$\ast$ current\+Menu = N\+U\+LL}\hypertarget{lcd_control_8c_a5825fcb80354e4a8d2d4158564d99e74}{}\label{lcd_control_8c_a5825fcb80354e4a8d2d4158564d99e74}

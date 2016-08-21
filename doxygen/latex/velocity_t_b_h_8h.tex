@@ -1,0 +1,280 @@
+\hypertarget{velocity_t_b_h_8h}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+T\+BH.h File Reference}
+\label{velocity_t_b_h_8h}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+T\+B\+H.\+h@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+T\+B\+H.\+h}}
+{\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvel___t_b_h__t}{vel\+\_\+\+T\+B\+H\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structvel___t_b_h__t}{vel\+\_\+\+T\+B\+H\+\_\+t} \hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{velocity_t_b_h_8h_a9f8ace9f738ab582cf07e5307dc88e07}{vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const float gain, const int out\+Val\+Approx, const float ticks\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Initializes a velocity T\+BH controller. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_t_b_h_8h_a36e6206707b4da883603ff5510860dd6}{vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Reinitializes a velocity T\+BH controller. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_t_b_h_8h_ac3be133d0d59bcdd90c8e6486959de33}{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const float alpha, const float beta)
+\begin{DoxyCompactList}\small\item\em Sets new filter constants. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_t_b_h_8h_a5f2e00f126925a758f2c0244e8404fe7}{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const int target\+Velocity, const int out\+Val\+Approx)
+\begin{DoxyCompactList}\small\item\em Sets the target velocity This should (generally) be used when the target velocity has changed. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_a0d2f493ce75913b771e8691db4736e74}{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Gets the current error. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_ab43a5f5a79d163c45e66e68d61bac2fa}{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Gets the current (filtered) velocity. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_aa41abedf2c42b6c83de5efcac3b29401}{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Gets the current target velocity. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_a9e3b5e9c1b4bdc016a245bdb51b00961}{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Gets the current output. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_t_b_h_8h_a57467e7b7898f2c7fdb5e20c754d921e}{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const int out\+Val\+Approx)
+\begin{DoxyCompactList}\small\item\em Sets the open-\/loop approximation. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_a259cefe1df3c2840fbe81719e49a89a2}{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh)
+\begin{DoxyCompactList}\small\item\em Gets the current open-\/loop approximation. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_ac173316e79b82a6e1a882c810b45a702}{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s velocity calculation without stepping math. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_t_b_h_8h_a679c7cbb6a7d298688aa6bd3fb736da4}{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller} (\hyperlink{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{vel\+\_\+\+T\+BH} $\ast$tbh, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+BH@{vel\+\_\+\+T\+BH}}
+\index{vel\+\_\+\+T\+BH@{vel\+\_\+\+T\+BH}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+BH}{vel_TBH}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf vel\+\_\+\+T\+B\+H\+\_\+t}  {\bf vel\+\_\+\+T\+BH}}\hypertarget{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}{}\label{velocity_t_b_h_8h_aa621e76971aed2eb1b6ba35367904a3b}
+
+
+\subsection{Function Documentation}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_GetError(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_a0d2f493ce75913b771e8691db4736e74}{}\label{velocity_t_b_h_8h_a0d2f493ce75913b771e8691db4736e74}
+
+
+Gets the current error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_GetOpenLoopApprox(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Open\+Loop\+Approx (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_a259cefe1df3c2840fbe81719e49a89a2}{}\label{velocity_t_b_h_8h_a259cefe1df3c2840fbe81719e49a89a2}
+
+
+Gets the current open-\/loop approximation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_GetOutput(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Output (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_a9e3b5e9c1b4bdc016a245bdb51b00961}{}\label{velocity_t_b_h_8h_a9e3b5e9c1b4bdc016a245bdb51b00961}
+
+
+Gets the current output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_GetTargetVelocity(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_aa41abedf2c42b6c83de5efcac3b29401}{}\label{velocity_t_b_h_8h_aa41abedf2c42b6c83de5efcac3b29401}
+
+
+Gets the current target velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_GetVelocity(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Get\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_ab43a5f5a79d163c45e66e68d61bac2fa}{}\label{velocity_t_b_h_8h_ab43a5f5a79d163c45e66e68d61bac2fa}
+
+
+Gets the current (filtered) velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller(vel\+\_\+\+T\+B\+H $\ast$tbh, const float gain, const int out\+Val\+Approx, const float ticks\+Per\+Rev)}{vel_TBH_InitController(vel_TBH *tbh, const float gain, const int outValApprox, const float ticksPerRev)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+T\+B\+H\+\_\+\+Init\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const float}]{gain, }
+\item[{const int}]{out\+Val\+Approx, }
+\item[{const float}]{ticks\+Per\+Rev}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_t_b_h_8h_a9f8ace9f738ab582cf07e5307dc88e07}{}\label{velocity_t_b_h_8h_a9f8ace9f738ab582cf07e5307dc88e07}
+
+
+Initializes a velocity T\+BH controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em gain} & Controller gain \\
+\hline
+{\em out\+Val\+Approx} & Approximate output at zero error for a given target velocity \\
+\hline
+{\em ticks\+Per\+Rev} & Sensor ticks per one revolution\\
+\hline
+{\em tbh} & The T\+BH controller to initialize \\
+\hline
+{\em gain} & Controller gain \\
+\hline
+{\em out\+Val\+Approx} & Approximate output at zero error for a given target velocity \\
+\hline
+{\em ticks\+Per\+Rev} & Sensor ticks per one revolution \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller(vel\+\_\+\+T\+B\+H $\ast$tbh)}{vel_TBH_ReInitController(vel_TBH *tbh)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+T\+B\+H\+\_\+\+Re\+Init\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_t_b_h_8h_a36e6206707b4da883603ff5510860dd6}{}\label{velocity_t_b_h_8h_a36e6206707b4da883603ff5510860dd6}
+
+
+Reinitializes a velocity T\+BH controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller to initialize \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants(vel\+\_\+\+T\+B\+H $\ast$tbh, const float alpha, const float beta)}{vel_TBH_SetFilterConstants(vel_TBH *tbh, const float alpha, const float beta)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Filter\+Constants (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const float}]{alpha, }
+\item[{const float}]{beta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_ac3be133d0d59bcdd90c8e6486959de33}{}\label{velocity_t_b_h_8h_ac3be133d0d59bcdd90c8e6486959de33}
+
+
+Sets new filter constants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em alpha} & D\+E\+MA filter constant alpha \\
+\hline
+{\em beta} & D\+E\+MA filter constant beta \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx(vel\+\_\+\+T\+B\+H $\ast$tbh, const int out\+Val\+Approx)}{vel_TBH_SetOpenLoopApprox(vel_TBH *tbh, const int outValApprox)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Open\+Loop\+Approx (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const int}]{out\+Val\+Approx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_a57467e7b7898f2c7fdb5e20c754d921e}{}\label{velocity_t_b_h_8h_a57467e7b7898f2c7fdb5e20c754d921e}
+
+
+Sets the open-\/loop approximation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em out\+Val\+Approx} & New approximate output for current target\+Velocity \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity(vel\+\_\+\+T\+B\+H $\ast$tbh, const int target\+Velocity, const int out\+Val\+Approx)}{vel_TBH_SetTargetVelocity(vel_TBH *tbh, const int targetVelocity, const int outValApprox)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+T\+B\+H\+\_\+\+Set\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const int}]{target\+Velocity, }
+\item[{const int}]{out\+Val\+Approx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_t_b_h_8h_a5f2e00f126925a758f2c0244e8404fe7}{}\label{velocity_t_b_h_8h_a5f2e00f126925a758f2c0244e8404fe7}
+
+
+Sets the target velocity This should (generally) be used when the target velocity has changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em target\+Velocity} & Target velocity \\
+\hline
+{\em out\+Val\+Approx} & Approximate output at zero error for this target velocity \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller@{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller(vel\+\_\+\+T\+B\+H $\ast$tbh, const float sens)}{vel_TBH_StepController(vel_TBH *tbh, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_t_b_h_8h_a679c7cbb6a7d298688aa6bd3fb736da4}{}\label{velocity_t_b_h_8h_a679c7cbb6a7d298688aa6bd3fb736da4}
+
+
+Steps the controller calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}
+\index{velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}!vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity}}
+\index{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity@{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity}!velocity\+T\+B\+H.\+h@{velocity\+T\+B\+H.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity(vel\+\_\+\+T\+B\+H $\ast$tbh, const float sens)}{vel_TBH_StepVelocity(vel_TBH *tbh, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+T\+B\+H\+\_\+\+Step\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+T\+BH} $\ast$}]{tbh, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_t_b_h_8h_ac173316e79b82a6e1a882c810b45a702}{}\label{velocity_t_b_h_8h_ac173316e79b82a6e1a882c810b45a702}
+
+
+Steps the controller\textquotesingle{}s velocity calculation without stepping math. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbh} & The T\+BH controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}

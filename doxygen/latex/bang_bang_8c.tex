@@ -1,0 +1,197 @@
+\hypertarget{bang_bang_8c}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/bang\+Bang.c File Reference}
+\label{bang_bang_8c}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/bang\+Bang.\+c@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/src/bang\+Bang.\+c}}
+{\ttfamily \#include \char`\"{}A\+P\+I.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bang\+Bang.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{bang_bang_8c_af2d07151717066de60b84cc7823f5e3f}{bang\+Bang\+\_\+\+Init\+Controller} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb, const int high\+Power, const int low\+Power, const float ticks\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Initializes a bangbang controller. \end{DoxyCompactList}\item 
+void \hyperlink{bang_bang_8c_afb9aacedc2c9f8efeafc2287b4053b8e}{bang\+Bang\+\_\+\+Set\+Filter\+Constants} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb, const float alpha, const float beta)
+\begin{DoxyCompactList}\small\item\em Sets new filter constants. \end{DoxyCompactList}\item 
+void \hyperlink{bang_bang_8c_acbbaa3d743be96fd2bb598a38a8acbbe}{bang\+Bang\+\_\+\+Set\+Target\+Velocity} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb, const int target\+Velocity)
+\begin{DoxyCompactList}\small\item\em Sets the controller\textquotesingle{}s target velocity. \end{DoxyCompactList}\item 
+int \hyperlink{bang_bang_8c_a5df2433322d8d52d99a4892b746b9edb}{bang\+Bang\+\_\+\+Get\+Error} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb)
+\begin{DoxyCompactList}\small\item\em Gets the current error. \end{DoxyCompactList}\item 
+int \hyperlink{bang_bang_8c_adf6407eb17eaec8093a1ba3b0cdc11c7}{bang\+Bang\+\_\+\+Get\+Velocity} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb)
+\begin{DoxyCompactList}\small\item\em Gets the current (filtered) velocity. \end{DoxyCompactList}\item 
+float \hyperlink{bang_bang_8c_adfb59c2feab6f9f54caee180a85b67b4}{bang\+Bang\+\_\+\+Get\+Target\+Velocity} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb)
+\begin{DoxyCompactList}\small\item\em Gets the current target velocity. \end{DoxyCompactList}\item 
+int \hyperlink{bang_bang_8c_a64e870c4a796703121a4c8a56e9c7696}{bang\+Bang\+\_\+\+Get\+Output} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb)
+\begin{DoxyCompactList}\small\item\em Gets the current output. \end{DoxyCompactList}\item 
+int \hyperlink{bang_bang_8c_a46366b8f4bbe25b954751ca0ad023c56}{bang\+Bang\+\_\+\+Step\+Velocity} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s velocity calculation without stepping math. \end{DoxyCompactList}\item 
+int \hyperlink{bang_bang_8c_af1b5c1f1c3472f40127f47f3a42b462e}{bang\+Bang\+\_\+\+Step\+Controller} (\hyperlink{bang_bang_8h_ae24db3942d2b7106a403e0edcecde570}{bang\+Bang} $\ast$bb, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Get\+Error@{bang\+Bang\+\_\+\+Get\+Error}}
+\index{bang\+Bang\+\_\+\+Get\+Error@{bang\+Bang\+\_\+\+Get\+Error}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Get\+Error(bang\+Bang $\ast$bb)}{bangBang_GetError(bangBang *bb)}}]{\setlength{\rightskip}{0pt plus 5cm}int bang\+Bang\+\_\+\+Get\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_a5df2433322d8d52d99a4892b746b9edb}{}\label{bang_bang_8c_a5df2433322d8d52d99a4892b746b9edb}
+
+
+Gets the current error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Get\+Output@{bang\+Bang\+\_\+\+Get\+Output}}
+\index{bang\+Bang\+\_\+\+Get\+Output@{bang\+Bang\+\_\+\+Get\+Output}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Get\+Output(bang\+Bang $\ast$bb)}{bangBang_GetOutput(bangBang *bb)}}]{\setlength{\rightskip}{0pt plus 5cm}int bang\+Bang\+\_\+\+Get\+Output (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_a64e870c4a796703121a4c8a56e9c7696}{}\label{bang_bang_8c_a64e870c4a796703121a4c8a56e9c7696}
+
+
+Gets the current output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Get\+Target\+Velocity@{bang\+Bang\+\_\+\+Get\+Target\+Velocity}}
+\index{bang\+Bang\+\_\+\+Get\+Target\+Velocity@{bang\+Bang\+\_\+\+Get\+Target\+Velocity}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Get\+Target\+Velocity(bang\+Bang $\ast$bb)}{bangBang_GetTargetVelocity(bangBang *bb)}}]{\setlength{\rightskip}{0pt plus 5cm}float bang\+Bang\+\_\+\+Get\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_adfb59c2feab6f9f54caee180a85b67b4}{}\label{bang_bang_8c_adfb59c2feab6f9f54caee180a85b67b4}
+
+
+Gets the current target velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Get\+Velocity@{bang\+Bang\+\_\+\+Get\+Velocity}}
+\index{bang\+Bang\+\_\+\+Get\+Velocity@{bang\+Bang\+\_\+\+Get\+Velocity}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Get\+Velocity(bang\+Bang $\ast$bb)}{bangBang_GetVelocity(bangBang *bb)}}]{\setlength{\rightskip}{0pt plus 5cm}int bang\+Bang\+\_\+\+Get\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_adf6407eb17eaec8093a1ba3b0cdc11c7}{}\label{bang_bang_8c_adf6407eb17eaec8093a1ba3b0cdc11c7}
+
+
+Gets the current (filtered) velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Init\+Controller@{bang\+Bang\+\_\+\+Init\+Controller}}
+\index{bang\+Bang\+\_\+\+Init\+Controller@{bang\+Bang\+\_\+\+Init\+Controller}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Init\+Controller(bang\+Bang $\ast$bb, const int high\+Power, const int low\+Power, const float ticks\+Per\+Rev)}{bangBang_InitController(bangBang *bb, const int highPower, const int lowPower, const float ticksPerRev)}}]{\setlength{\rightskip}{0pt plus 5cm}void bang\+Bang\+\_\+\+Init\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb, }
+\item[{const int}]{high\+Power, }
+\item[{const int}]{low\+Power, }
+\item[{const float}]{ticks\+Per\+Rev}
+\end{DoxyParamCaption}
+)}\hypertarget{bang_bang_8c_af2d07151717066de60b84cc7823f5e3f}{}\label{bang_bang_8c_af2d07151717066de60b84cc7823f5e3f}
+
+
+Initializes a bangbang controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+{\em high\+Power} & Output when below or at target velocity \\
+\hline
+{\em low\+Power} & Output when above target velocity \\
+\hline
+{\em ticks\+Per\+Rev} & Sensor ticks per revolution \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Set\+Filter\+Constants@{bang\+Bang\+\_\+\+Set\+Filter\+Constants}}
+\index{bang\+Bang\+\_\+\+Set\+Filter\+Constants@{bang\+Bang\+\_\+\+Set\+Filter\+Constants}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Set\+Filter\+Constants(bang\+Bang $\ast$bb, const float alpha, const float beta)}{bangBang_SetFilterConstants(bangBang *bb, const float alpha, const float beta)}}]{\setlength{\rightskip}{0pt plus 5cm}void bang\+Bang\+\_\+\+Set\+Filter\+Constants (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb, }
+\item[{const float}]{alpha, }
+\item[{const float}]{beta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_afb9aacedc2c9f8efeafc2287b4053b8e}{}\label{bang_bang_8c_afb9aacedc2c9f8efeafc2287b4053b8e}
+
+
+Sets new filter constants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+{\em alpha} & D\+E\+MA filter alpha \\
+\hline
+{\em beta} & D\+E\+MA filter beta \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Set\+Target\+Velocity@{bang\+Bang\+\_\+\+Set\+Target\+Velocity}}
+\index{bang\+Bang\+\_\+\+Set\+Target\+Velocity@{bang\+Bang\+\_\+\+Set\+Target\+Velocity}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Set\+Target\+Velocity(bang\+Bang $\ast$bb, const int target\+Velocity)}{bangBang_SetTargetVelocity(bangBang *bb, const int targetVelocity)}}]{\setlength{\rightskip}{0pt plus 5cm}void bang\+Bang\+\_\+\+Set\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb, }
+\item[{const int}]{target\+Velocity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{bang_bang_8c_acbbaa3d743be96fd2bb598a38a8acbbe}{}\label{bang_bang_8c_acbbaa3d743be96fd2bb598a38a8acbbe}
+
+
+Sets the controller\textquotesingle{}s target velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+{\em target\+Velocity} & New target velocity \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Step\+Controller@{bang\+Bang\+\_\+\+Step\+Controller}}
+\index{bang\+Bang\+\_\+\+Step\+Controller@{bang\+Bang\+\_\+\+Step\+Controller}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Step\+Controller(bang\+Bang $\ast$bb, const float sens)}{bangBang_StepController(bangBang *bb, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int bang\+Bang\+\_\+\+Step\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{bang_bang_8c_af1b5c1f1c3472f40127f47f3a42b462e}{}\label{bang_bang_8c_af1b5c1f1c3472f40127f47f3a42b462e}
+
+
+Steps the controller\textquotesingle{}s calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}
+\index{bang\+Bang.\+c@{bang\+Bang.\+c}!bang\+Bang\+\_\+\+Step\+Velocity@{bang\+Bang\+\_\+\+Step\+Velocity}}
+\index{bang\+Bang\+\_\+\+Step\+Velocity@{bang\+Bang\+\_\+\+Step\+Velocity}!bang\+Bang.\+c@{bang\+Bang.\+c}}
+\subsubsection[{\texorpdfstring{bang\+Bang\+\_\+\+Step\+Velocity(bang\+Bang $\ast$bb, const float sens)}{bangBang_StepVelocity(bangBang *bb, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int bang\+Bang\+\_\+\+Step\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf bang\+Bang} $\ast$}]{bb, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{bang_bang_8c_a46366b8f4bbe25b954751ca0ad023c56}{}\label{bang_bang_8c_a46366b8f4bbe25b954751ca0ad023c56}
+
+
+Steps the controller\textquotesingle{}s velocity calculation without stepping math. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & The Bang\+Bang controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['bangbang',['bangBang',['../bang_bang_8h.html#ae24db3942d2b7106a403e0edcecde570',1,'bangBang.h']]],
+  ['bangbang_2ec',['bangBang.c',['../bang_bang_8c.html',1,'']]],
+  ['bangbang_2eh',['bangBang.h',['../bang_bang_8h.html',1,'']]],
+  ['bangbang_5fgeterror',['bangBang_GetError',['../bang_bang_8h.html#a5df2433322d8d52d99a4892b746b9edb',1,'bangBang_GetError(bangBang *bb):&#160;bangBang.c'],['../bang_bang_8c.html#a5df2433322d8d52d99a4892b746b9edb',1,'bangBang_GetError(bangBang *bb):&#160;bangBang.c']]],
+  ['bangbang_5fgetoutput',['bangBang_GetOutput',['../bang_bang_8h.html#a64e870c4a796703121a4c8a56e9c7696',1,'bangBang_GetOutput(bangBang *bb):&#160;bangBang.c'],['../bang_bang_8c.html#a64e870c4a796703121a4c8a56e9c7696',1,'bangBang_GetOutput(bangBang *bb):&#160;bangBang.c']]],
+  ['bangbang_5fgettargetvelocity',['bangBang_GetTargetVelocity',['../bang_bang_8h.html#adfb59c2feab6f9f54caee180a85b67b4',1,'bangBang_GetTargetVelocity(bangBang *bb):&#160;bangBang.c'],['../bang_bang_8c.html#adfb59c2feab6f9f54caee180a85b67b4',1,'bangBang_GetTargetVelocity(bangBang *bb):&#160;bangBang.c']]],
+  ['bangbang_5fgetvelocity',['bangBang_GetVelocity',['../bang_bang_8h.html#adf6407eb17eaec8093a1ba3b0cdc11c7',1,'bangBang_GetVelocity(bangBang *bb):&#160;bangBang.c'],['../bang_bang_8c.html#adf6407eb17eaec8093a1ba3b0cdc11c7',1,'bangBang_GetVelocity(bangBang *bb):&#160;bangBang.c']]],
+  ['bangbang_5finitcontroller',['bangBang_InitController',['../bang_bang_8h.html#af2d07151717066de60b84cc7823f5e3f',1,'bangBang_InitController(bangBang *bb, const int highPower, const int lowPower, const float ticksPerRev):&#160;bangBang.c'],['../bang_bang_8c.html#af2d07151717066de60b84cc7823f5e3f',1,'bangBang_InitController(bangBang *bb, const int highPower, const int lowPower, const float ticksPerRev):&#160;bangBang.c']]],
+  ['bangbang_5fsetfilterconstants',['bangBang_SetFilterConstants',['../bang_bang_8h.html#afb9aacedc2c9f8efeafc2287b4053b8e',1,'bangBang_SetFilterConstants(bangBang *bb, const float alpha, const float beta):&#160;bangBang.c'],['../bang_bang_8c.html#afb9aacedc2c9f8efeafc2287b4053b8e',1,'bangBang_SetFilterConstants(bangBang *bb, const float alpha, const float beta):&#160;bangBang.c']]],
+  ['bangbang_5fsettargetvelocity',['bangBang_SetTargetVelocity',['../bang_bang_8h.html#acbbaa3d743be96fd2bb598a38a8acbbe',1,'bangBang_SetTargetVelocity(bangBang *bb, const int targetVelocity):&#160;bangBang.c'],['../bang_bang_8c.html#acbbaa3d743be96fd2bb598a38a8acbbe',1,'bangBang_SetTargetVelocity(bangBang *bb, const int targetVelocity):&#160;bangBang.c']]],
+  ['bangbang_5fstepcontroller',['bangBang_StepController',['../bang_bang_8h.html#af1b5c1f1c3472f40127f47f3a42b462e',1,'bangBang_StepController(bangBang *bb, const float sens):&#160;bangBang.c'],['../bang_bang_8c.html#af1b5c1f1c3472f40127f47f3a42b462e',1,'bangBang_StepController(bangBang *bb, const float sens):&#160;bangBang.c']]],
+  ['bangbang_5fstepvelocity',['bangBang_StepVelocity',['../bang_bang_8h.html#a46366b8f4bbe25b954751ca0ad023c56',1,'bangBang_StepVelocity(bangBang *bb, const float sens):&#160;bangBang.c'],['../bang_bang_8c.html#a46366b8f4bbe25b954751ca0ad023c56',1,'bangBang_StepVelocity(bangBang *bb, const float sens):&#160;bangBang.c']]],
+  ['bangbang_5ft',['bangBang_t',['../structbang_bang__t.html',1,'']]],
+  ['beta',['beta',['../structbang_bang__t.html#a69060aab09568c270a0e19247a4f3f1c',1,'bangBang_t::beta()'],['../structvel___p_i_d__t.html#a1c2d07b2cff55945e9d0652965f5dd28',1,'vel_PID_t::beta()'],['../structvel___t_b_h__t.html#abda115b47f5bb8ef32e0012a2cd86a89',1,'vel_TBH_t::beta()']]],
+  ['bci_2dprose_20documentation',['BCI-PROSe Documentation',['../index.html',1,'']]]
+];

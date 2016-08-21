@@ -1,0 +1,220 @@
+\hypertarget{velocity_p_i_d_8h}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+P\+ID.h File Reference}
+\label{velocity_p_i_d_8h}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+P\+I\+D.\+h@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/velocity\+P\+I\+D.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvel___p_i_d__t}{vel\+\_\+\+P\+I\+D\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structvel___p_i_d__t}{vel\+\_\+\+P\+I\+D\+\_\+t} \hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{velocity_p_i_d_8h_a0ad141a890d27d4a3acf57d5ae8bf8ba}{vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid, const float kP, const float kD, const float ticks\+Per\+Rev)
+\begin{DoxyCompactList}\small\item\em Initializes a velocity P\+ID controller. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_p_i_d_8h_a2b9be88b8fe73549b4143d72076c4e24}{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid, const float alpha, const float beta)
+\begin{DoxyCompactList}\small\item\em Sets new filter constants. \end{DoxyCompactList}\item 
+void \hyperlink{velocity_p_i_d_8h_ab65c613f3ce3c22c3593cec6b6c95668}{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid, const int target\+Velocity)
+\begin{DoxyCompactList}\small\item\em Sets the controller\textquotesingle{}s target velocity. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_p_i_d_8h_a50c28c9cac1656ab8476e219426c6b28}{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current error. \end{DoxyCompactList}\item 
+float \hyperlink{velocity_p_i_d_8h_aa149d5e66170fc128968c1dd88c2573c}{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current (filtered) velocity. \end{DoxyCompactList}\item 
+float \hyperlink{velocity_p_i_d_8h_af47d8da0986d5ad91f1feb6ff22754c3}{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current target velocity. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_p_i_d_8h_a2a0d78cf6c88ddc87b92845a78f3642d}{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Gets the current output. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_p_i_d_8h_a1d43e16c2f546a8dfe481bfe180cb995}{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s velocity calculation without stepping math. \end{DoxyCompactList}\item 
+int \hyperlink{velocity_p_i_d_8h_aeb6f99faa14ce553037d11b12cb1240f}{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller} (\hyperlink{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{vel\+\_\+\+P\+ID} $\ast$pid, const float sens)
+\begin{DoxyCompactList}\small\item\em Steps the controller\textquotesingle{}s calculations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+ID@{vel\+\_\+\+P\+ID}}
+\index{vel\+\_\+\+P\+ID@{vel\+\_\+\+P\+ID}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+ID}{vel_PID}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf vel\+\_\+\+P\+I\+D\+\_\+t}  {\bf vel\+\_\+\+P\+ID}}\hypertarget{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}{}\label{velocity_p_i_d_8h_abd5049ed1e9c2fdd1622a3bee7fab264}
+
+
+\subsection{Function Documentation}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error(vel\+\_\+\+P\+I\+D $\ast$pid)}{vel_PID_GetError(vel_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_a50c28c9cac1656ab8476e219426c6b28}{}\label{velocity_p_i_d_8h_a50c28c9cac1656ab8476e219426c6b28}
+
+
+Gets the current error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output(vel\+\_\+\+P\+I\+D $\ast$pid)}{vel_PID_GetOutput(vel_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Output (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_a2a0d78cf6c88ddc87b92845a78f3642d}{}\label{velocity_p_i_d_8h_a2a0d78cf6c88ddc87b92845a78f3642d}
+
+
+Gets the current output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity(vel\+\_\+\+P\+I\+D $\ast$pid)}{vel_PID_GetTargetVelocity(vel_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}float vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_af47d8da0986d5ad91f1feb6ff22754c3}{}\label{velocity_p_i_d_8h_af47d8da0986d5ad91f1feb6ff22754c3}
+
+
+Gets the current target velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller\\
+\hline
+\end{DoxyParams}
+Gets the current target velocity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity(vel\+\_\+\+P\+I\+D $\ast$pid)}{vel_PID_GetVelocity(vel_PID *pid)}}]{\setlength{\rightskip}{0pt plus 5cm}float vel\+\_\+\+P\+I\+D\+\_\+\+Get\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_aa149d5e66170fc128968c1dd88c2573c}{}\label{velocity_p_i_d_8h_aa149d5e66170fc128968c1dd88c2573c}
+
+
+Gets the current (filtered) velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller@{vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller@{vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller(vel\+\_\+\+P\+I\+D $\ast$pid, const float k\+P, const float k\+D, const float ticks\+Per\+Rev)}{vel_PID_InitController(vel_PID *pid, const float kP, const float kD, const float ticksPerRev)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+P\+I\+D\+\_\+\+Init\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{kP, }
+\item[{const float}]{kD, }
+\item[{const float}]{ticks\+Per\+Rev}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_p_i_d_8h_a0ad141a890d27d4a3acf57d5ae8bf8ba}{}\label{velocity_p_i_d_8h_a0ad141a890d27d4a3acf57d5ae8bf8ba}
+
+
+Initializes a velocity P\+ID controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em kP} & Proportional gain \\
+\hline
+{\em kD} & Derivative gain \\
+\hline
+{\em ticks\+Per\+Rev} & Sensor ticks per one revolution \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants@{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants@{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants(vel\+\_\+\+P\+I\+D $\ast$pid, const float alpha, const float beta)}{vel_PID_SetFilterConstants(vel_PID *pid, const float alpha, const float beta)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Filter\+Constants (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{alpha, }
+\item[{const float}]{beta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_a2b9be88b8fe73549b4143d72076c4e24}{}\label{velocity_p_i_d_8h_a2b9be88b8fe73549b4143d72076c4e24}
+
+
+Sets new filter constants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em alpha} & D\+E\+MA alpha gain \\
+\hline
+{\em beta} & D\+E\+MA beta gain \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity(vel\+\_\+\+P\+I\+D $\ast$pid, const int target\+Velocity)}{vel_PID_SetTargetVelocity(vel_PID *pid, const int targetVelocity)}}]{\setlength{\rightskip}{0pt plus 5cm}void vel\+\_\+\+P\+I\+D\+\_\+\+Set\+Target\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const int}]{target\+Velocity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{velocity_p_i_d_8h_ab65c613f3ce3c22c3593cec6b6c95668}{}\label{velocity_p_i_d_8h_ab65c613f3ce3c22c3593cec6b6c95668}
+
+
+Sets the controller\textquotesingle{}s target velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em target\+Velocity} & New target velocity \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller@{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller@{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller(vel\+\_\+\+P\+I\+D $\ast$pid, const float sens)}{vel_PID_StepController(vel_PID *pid, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_p_i_d_8h_aeb6f99faa14ce553037d11b12cb1240f}{}\label{velocity_p_i_d_8h_aeb6f99faa14ce553037d11b12cb1240f}
+
+
+Steps the controller\textquotesingle{}s calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}
+\index{velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}!vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity}}
+\index{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity@{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity}!velocity\+P\+I\+D.\+h@{velocity\+P\+I\+D.\+h}}
+\subsubsection[{\texorpdfstring{vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity(vel\+\_\+\+P\+I\+D $\ast$pid, const float sens)}{vel_PID_StepVelocity(vel_PID *pid, const float sens)}}]{\setlength{\rightskip}{0pt plus 5cm}int vel\+\_\+\+P\+I\+D\+\_\+\+Step\+Velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf vel\+\_\+\+P\+ID} $\ast$}]{pid, }
+\item[{const float}]{sens}
+\end{DoxyParamCaption}
+)}\hypertarget{velocity_p_i_d_8h_a1d43e16c2f546a8dfe481bfe180cb995}{}\label{velocity_p_i_d_8h_a1d43e16c2f546a8dfe481bfe180cb995}
+
+
+Steps the controller\textquotesingle{}s velocity calculation without stepping math. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & The P\+ID controller \\
+\hline
+{\em sens} & New sensor reading \\
+\hline
+\end{DoxyParams}

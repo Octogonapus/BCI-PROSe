@@ -1,0 +1,180 @@
+\hypertarget{motor_control_8h}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/motor\+Control.h File Reference}
+\label{motor_control_8h}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/motor\+Control.\+h@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/motor\+Control.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdrive_motor__t}{drive\+Motor\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{motor_control_8h_a162d7942ac9616a21ff2fe46b74c33ee}{M\+O\+T\+O\+R\+\_\+\+N\+UM}~10
+\item 
+\#define \hyperlink{motor_control_8h_a86d3fd245e52226567d1b1de89c8b506}{M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE}~(-\/127)
+\item 
+\#define \hyperlink{motor_control_8h_ac17e1cea2c78912c598faf791c0eabb1}{M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE}~127
+\item 
+\#define \hyperlink{motor_control_8h_ac98ec74769fa24696be391ff48cce0de}{M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}~10
+\item 
+\#define \hyperlink{motor_control_8h_af7a127608c94c0fca6249856b7855370}{M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}~256
+\item 
+\#define \hyperlink{motor_control_8h_a5ec521ab7747cc230a47820165f8acde}{M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY}~15
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structdrive_motor__t}{drive\+Motor\+\_\+t} \hyperlink{motor_control_8h_a2111fc504b398a57fb89304b270361b4}{drive\+Motor}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{motor_control_8h_aba0407fa902b5e93b5ae6eae5e5e8130}{set\+Motor\+Speed} (const unsigned char index, const int power)
+\item 
+void \hyperlink{motor_control_8h_aaa33ce69af5f72776ea347d72e19077a}{set\+Motor\+Speed\+\_\+\+Bypass} (const unsigned char index, const int power)
+\item 
+void \hyperlink{motor_control_8h_adc48fcab62293894261480b221c82b24}{set\+Motor\+Slew} (const unsigned char index, const int rate)
+\item 
+\hyperlink{motor_control_8h_a2111fc504b398a57fb89304b270361b4}{drive\+Motor} $\ast$ \hyperlink{motor_control_8h_a319fc00e1bcf6f71afed4393fe14f246}{get\+Motor} (const unsigned char index)
+\item 
+int \hyperlink{motor_control_8h_ae881316a462aa6640fbd871e482c5842}{get\+Motor\+Speed} (const unsigned char index)
+\item 
+void \hyperlink{motor_control_8h_ae7433ddd204e85366d982f18895f4b71}{set\+Motor\+Active} (const unsigned char index)
+\item 
+void \hyperlink{motor_control_8h_abc3ac3861032c801955336a6742dfd5d}{set\+Motor\+Inactive} (const unsigned char index)
+\item 
+void \hyperlink{motor_control_8h_ac10b2d2423e24d25ff1b9e14197f0705}{set\+Motor\+Speed\+Raw} (const unsigned char index, const int power)
+\item 
+int \hyperlink{motor_control_8h_ab8c053878da1242aee1696b509424036}{get\+Motor\+Speed\+Raw} (const unsigned char index)
+\item 
+\hyperlink{motor_control_8h_a2111fc504b398a57fb89304b270361b4}{drive\+Motor} $\ast$ \hyperlink{motor_control_8h_a47181457d7a4877d44b1629d54e35d91}{add\+Motor} (const unsigned char index, const float slew\+Rate)
+\begin{DoxyCompactList}\small\item\em Adds and initializes a motor (by name) to the motor array. \end{DoxyCompactList}\item 
+void \hyperlink{motor_control_8h_a714075bc64ea1d37d572bc2583115156}{start\+Motor\+Slew\+Rate\+Task} ()
+\begin{DoxyCompactList}\small\item\em Updates the power of each motor to best match the requested power. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE@{M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}}
+\index{M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE@{M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}{MOTOR_DEFAULT_SLEW_RATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE~10}\hypertarget{motor_control_8h_ac98ec74769fa24696be391ff48cce0de}{}\label{motor_control_8h_ac98ec74769fa24696be391ff48cce0de}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE@{M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}}
+\index{M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE@{M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE}{MOTOR_FAST_SLEW_RATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+F\+A\+S\+T\+\_\+\+S\+L\+E\+W\+\_\+\+R\+A\+TE~256}\hypertarget{motor_control_8h_af7a127608c94c0fca6249856b7855370}{}\label{motor_control_8h_af7a127608c94c0fca6249856b7855370}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE}}
+\index{M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE}{MOTOR_MAX_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE~127}\hypertarget{motor_control_8h_ac17e1cea2c78912c598faf791c0eabb1}{}\label{motor_control_8h_ac17e1cea2c78912c598faf791c0eabb1}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE@{M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE}}
+\index{M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE@{M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE}{MOTOR_MIN_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE~(-\/127)}\hypertarget{motor_control_8h_a86d3fd245e52226567d1b1de89c8b506}{}\label{motor_control_8h_a86d3fd245e52226567d1b1de89c8b506}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+N\+UM@{M\+O\+T\+O\+R\+\_\+\+N\+UM}}
+\index{M\+O\+T\+O\+R\+\_\+\+N\+UM@{M\+O\+T\+O\+R\+\_\+\+N\+UM}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+N\+UM}{MOTOR_NUM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+N\+UM~10}\hypertarget{motor_control_8h_a162d7942ac9616a21ff2fe46b74c33ee}{}\label{motor_control_8h_a162d7942ac9616a21ff2fe46b74c33ee}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY@{M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY}}
+\index{M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY@{M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY}{MOTOR_TASK_DELAY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+T\+O\+R\+\_\+\+T\+A\+S\+K\+\_\+\+D\+E\+L\+AY~15}\hypertarget{motor_control_8h_a5ec521ab7747cc230a47820165f8acde}{}\label{motor_control_8h_a5ec521ab7747cc230a47820165f8acde}
+
+
+\subsection{Typedef Documentation}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!drive\+Motor@{drive\+Motor}}
+\index{drive\+Motor@{drive\+Motor}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{drive\+Motor}{driveMotor}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf drive\+Motor\+\_\+t}  {\bf drive\+Motor}}\hypertarget{motor_control_8h_a2111fc504b398a57fb89304b270361b4}{}\label{motor_control_8h_a2111fc504b398a57fb89304b270361b4}
+
+
+\subsection{Function Documentation}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!add\+Motor@{add\+Motor}}
+\index{add\+Motor@{add\+Motor}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{add\+Motor(const unsigned char index, const float slew\+Rate)}{addMotor(const unsigned char index, const float slewRate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf drive\+Motor}$\ast$ add\+Motor (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index, }
+\item[{const float}]{slew\+Rate}
+\end{DoxyParamCaption}
+)}\hypertarget{motor_control_8h_a47181457d7a4877d44b1629d54e35d91}{}\label{motor_control_8h_a47181457d7a4877d44b1629d54e35d91}
+
+
+Adds and initializes a motor (by name) to the motor array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Port number of the motor \\
+\hline
+{\em slew\+Rate} & Slew rate of the motor \\
+\hline
+\end{DoxyParams}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!get\+Motor@{get\+Motor}}
+\index{get\+Motor@{get\+Motor}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{get\+Motor(const unsigned char index)}{getMotor(const unsigned char index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf drive\+Motor}$\ast$ get\+Motor (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_a319fc00e1bcf6f71afed4393fe14f246}{}\label{motor_control_8h_a319fc00e1bcf6f71afed4393fe14f246}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!get\+Motor\+Speed@{get\+Motor\+Speed}}
+\index{get\+Motor\+Speed@{get\+Motor\+Speed}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{get\+Motor\+Speed(const unsigned char index)}{getMotorSpeed(const unsigned char index)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Motor\+Speed (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_ae881316a462aa6640fbd871e482c5842}{}\label{motor_control_8h_ae881316a462aa6640fbd871e482c5842}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!get\+Motor\+Speed\+Raw@{get\+Motor\+Speed\+Raw}}
+\index{get\+Motor\+Speed\+Raw@{get\+Motor\+Speed\+Raw}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{get\+Motor\+Speed\+Raw(const unsigned char index)}{getMotorSpeedRaw(const unsigned char index)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Motor\+Speed\+Raw (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_ab8c053878da1242aee1696b509424036}{}\label{motor_control_8h_ab8c053878da1242aee1696b509424036}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Active@{set\+Motor\+Active}}
+\index{set\+Motor\+Active@{set\+Motor\+Active}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Active(const unsigned char index)}{setMotorActive(const unsigned char index)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Active (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_ae7433ddd204e85366d982f18895f4b71}{}\label{motor_control_8h_ae7433ddd204e85366d982f18895f4b71}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Inactive@{set\+Motor\+Inactive}}
+\index{set\+Motor\+Inactive@{set\+Motor\+Inactive}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Inactive(const unsigned char index)}{setMotorInactive(const unsigned char index)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Inactive (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_abc3ac3861032c801955336a6742dfd5d}{}\label{motor_control_8h_abc3ac3861032c801955336a6742dfd5d}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Slew@{set\+Motor\+Slew}}
+\index{set\+Motor\+Slew@{set\+Motor\+Slew}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Slew(const unsigned char index, const int rate)}{setMotorSlew(const unsigned char index, const int rate)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Slew (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index, }
+\item[{const int}]{rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_adc48fcab62293894261480b221c82b24}{}\label{motor_control_8h_adc48fcab62293894261480b221c82b24}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Speed@{set\+Motor\+Speed}}
+\index{set\+Motor\+Speed@{set\+Motor\+Speed}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Speed(const unsigned char index, const int power)}{setMotorSpeed(const unsigned char index, const int power)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Speed (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index, }
+\item[{const int}]{power}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_aba0407fa902b5e93b5ae6eae5e5e8130}{}\label{motor_control_8h_aba0407fa902b5e93b5ae6eae5e5e8130}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Speed\+\_\+\+Bypass@{set\+Motor\+Speed\+\_\+\+Bypass}}
+\index{set\+Motor\+Speed\+\_\+\+Bypass@{set\+Motor\+Speed\+\_\+\+Bypass}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Speed\+\_\+\+Bypass(const unsigned char index, const int power)}{setMotorSpeed_Bypass(const unsigned char index, const int power)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Speed\+\_\+\+Bypass (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index, }
+\item[{const int}]{power}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_aaa33ce69af5f72776ea347d72e19077a}{}\label{motor_control_8h_aaa33ce69af5f72776ea347d72e19077a}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!set\+Motor\+Speed\+Raw@{set\+Motor\+Speed\+Raw}}
+\index{set\+Motor\+Speed\+Raw@{set\+Motor\+Speed\+Raw}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{set\+Motor\+Speed\+Raw(const unsigned char index, const int power)}{setMotorSpeedRaw(const unsigned char index, const int power)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Motor\+Speed\+Raw (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{index, }
+\item[{const int}]{power}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_ac10b2d2423e24d25ff1b9e14197f0705}{}\label{motor_control_8h_ac10b2d2423e24d25ff1b9e14197f0705}
+\index{motor\+Control.\+h@{motor\+Control.\+h}!start\+Motor\+Slew\+Rate\+Task@{start\+Motor\+Slew\+Rate\+Task}}
+\index{start\+Motor\+Slew\+Rate\+Task@{start\+Motor\+Slew\+Rate\+Task}!motor\+Control.\+h@{motor\+Control.\+h}}
+\subsubsection[{\texorpdfstring{start\+Motor\+Slew\+Rate\+Task()}{startMotorSlewRateTask()}}]{\setlength{\rightskip}{0pt plus 5cm}void start\+Motor\+Slew\+Rate\+Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{motor_control_8h_a714075bc64ea1d37d572bc2583115156}{}\label{motor_control_8h_a714075bc64ea1d37d572bc2583115156}
+
+
+Updates the power of each motor to best match the requested power. 
+

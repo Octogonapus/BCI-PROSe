@@ -1,0 +1,88 @@
+\hypertarget{math_8h}{}\section{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/math.h File Reference}
+\label{math_8h}\index{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/math.\+h@{D\+:/\+Documents/\+Workspace/\+B\+C\+I-\/\+P\+R\+O\+Se/include/math.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{math_8h_a54390890ad898a7b6f97877512cea240}{C\+U\+B\+E\+D\+\_\+127}~16129
+\item 
+\#define \hyperlink{math_8h_a28eee0343f5815994c1d0d28840cbd24}{R\+O\+O\+T\+\_\+2}~1.\+414
+\item 
+\#define \hyperlink{math_8h_a002b2f4894492820fe708b1b7e7c5e70}{E\+P\+S\+I\+L\+ON}~1000
+\item 
+\#define \hyperlink{math_8h_ac409214b2716580e9d2aa1f7b663694e}{sign}(value)~( (value) $>$= 0 ? 1 \+: (-\/1) )
+\item 
+\#define \hyperlink{math_8h_aeba456131346a8ceb00b1f67334de2fb}{cube}(value)~( (value) $\ast$ (value) $\ast$ (value) )
+\item 
+\#define \hyperlink{math_8h_ae3cfa4e05c0e79be2a04d824c9005bf8}{inches\+To\+Ticks}(inches,  diam)~( ((inches) / (PI $\ast$ (diam))) $\ast$ 360 )
+\item 
+\#define \hyperlink{math_8h_a59cbd77f0a27bb743409ba1411234543}{ticks\+To\+Inches}(ticks,  diam)~( ((diam) $\ast$ PI) $\ast$ ((ticks) / 360) )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{math_8h_aae4dc3aefbe4d9e61fe8b47122b5dc74}{util\+\_\+\+Calculate\+Timestep} (unsigned int $\ast$dt, unsigned int $\ast$prev\+Time)
+\begin{DoxyCompactList}\small\item\em Calculate timestep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{math.\+h@{math.\+h}!cube@{cube}}
+\index{cube@{cube}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{cube}{cube}}]{\setlength{\rightskip}{0pt plus 5cm}\#define cube(
+\begin{DoxyParamCaption}
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~( (value) $\ast$ (value) $\ast$ (value) )}\hypertarget{math_8h_aeba456131346a8ceb00b1f67334de2fb}{}\label{math_8h_aeba456131346a8ceb00b1f67334de2fb}
+\index{math.\+h@{math.\+h}!C\+U\+B\+E\+D\+\_\+127@{C\+U\+B\+E\+D\+\_\+127}}
+\index{C\+U\+B\+E\+D\+\_\+127@{C\+U\+B\+E\+D\+\_\+127}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{C\+U\+B\+E\+D\+\_\+127}{CUBED_127}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+U\+B\+E\+D\+\_\+127~16129}\hypertarget{math_8h_a54390890ad898a7b6f97877512cea240}{}\label{math_8h_a54390890ad898a7b6f97877512cea240}
+\index{math.\+h@{math.\+h}!E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}}
+\index{E\+P\+S\+I\+L\+ON@{E\+P\+S\+I\+L\+ON}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+I\+L\+ON}{EPSILON}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+P\+S\+I\+L\+ON~1000}\hypertarget{math_8h_a002b2f4894492820fe708b1b7e7c5e70}{}\label{math_8h_a002b2f4894492820fe708b1b7e7c5e70}
+\index{math.\+h@{math.\+h}!inches\+To\+Ticks@{inches\+To\+Ticks}}
+\index{inches\+To\+Ticks@{inches\+To\+Ticks}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{inches\+To\+Ticks}{inchesToTicks}}]{\setlength{\rightskip}{0pt plus 5cm}\#define inches\+To\+Ticks(
+\begin{DoxyParamCaption}
+\item[{}]{inches, }
+\item[{}]{diam}
+\end{DoxyParamCaption}
+)~( ((inches) / (PI $\ast$ (diam))) $\ast$ 360 )}\hypertarget{math_8h_ae3cfa4e05c0e79be2a04d824c9005bf8}{}\label{math_8h_ae3cfa4e05c0e79be2a04d824c9005bf8}
+\index{math.\+h@{math.\+h}!R\+O\+O\+T\+\_\+2@{R\+O\+O\+T\+\_\+2}}
+\index{R\+O\+O\+T\+\_\+2@{R\+O\+O\+T\+\_\+2}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{R\+O\+O\+T\+\_\+2}{ROOT_2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+O\+O\+T\+\_\+2~1.\+414}\hypertarget{math_8h_a28eee0343f5815994c1d0d28840cbd24}{}\label{math_8h_a28eee0343f5815994c1d0d28840cbd24}
+\index{math.\+h@{math.\+h}!sign@{sign}}
+\index{sign@{sign}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{sign}{sign}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sign(
+\begin{DoxyParamCaption}
+\item[{}]{value}
+\end{DoxyParamCaption}
+)~( (value) $>$= 0 ? 1 \+: (-\/1) )}\hypertarget{math_8h_ac409214b2716580e9d2aa1f7b663694e}{}\label{math_8h_ac409214b2716580e9d2aa1f7b663694e}
+\index{math.\+h@{math.\+h}!ticks\+To\+Inches@{ticks\+To\+Inches}}
+\index{ticks\+To\+Inches@{ticks\+To\+Inches}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{ticks\+To\+Inches}{ticksToInches}}]{\setlength{\rightskip}{0pt plus 5cm}\#define ticks\+To\+Inches(
+\begin{DoxyParamCaption}
+\item[{}]{ticks, }
+\item[{}]{diam}
+\end{DoxyParamCaption}
+)~( ((diam) $\ast$ PI) $\ast$ ((ticks) / 360) )}\hypertarget{math_8h_a59cbd77f0a27bb743409ba1411234543}{}\label{math_8h_a59cbd77f0a27bb743409ba1411234543}
+
+
+\subsection{Function Documentation}
+\index{math.\+h@{math.\+h}!util\+\_\+\+Calculate\+Timestep@{util\+\_\+\+Calculate\+Timestep}}
+\index{util\+\_\+\+Calculate\+Timestep@{util\+\_\+\+Calculate\+Timestep}!math.\+h@{math.\+h}}
+\subsubsection[{\texorpdfstring{util\+\_\+\+Calculate\+Timestep(unsigned int $\ast$dt, unsigned int $\ast$prev\+Time)}{util_CalculateTimestep(unsigned int *dt, unsigned int *prevTime)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long util\+\_\+\+Calculate\+Timestep (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{dt, }
+\item[{unsigned int $\ast$}]{prev\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{math_8h_aae4dc3aefbe4d9e61fe8b47122b5dc74}{}\label{math_8h_aae4dc3aefbe4d9e61fe8b47122b5dc74}
+
+
+Calculate timestep. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & dt variable to save to \\
+\hline
+{\em prev\+Time} & Previous time variable to pull from and then save to \\
+\hline
+\end{DoxyParams}
