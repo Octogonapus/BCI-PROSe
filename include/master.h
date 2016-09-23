@@ -16,7 +16,7 @@
  *
  * \section intro_sec Introduction
  *
- * This library is a translation of Octogonapus/BCI, which is no longer under active development. Development efforts have been moved to this code base as PROSe is a superior platform compared to RobotC, the platform of Octogonapus/BCI.
+ * This library is a translation of Octogonapus/BCI.
  *
  * \section install_sec Installation
  *
